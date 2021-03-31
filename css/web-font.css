@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'VolvoNovum';
+  font-weight: 200;
+  src: url(../font/volvo-novum-semi-light.woff2);
+}
+
+@font-face {
+  font-family: 'VolvoNovum';
+  font-weight: 300;
+  src: url(../font/volvo-novum-regular.woff2);
+}
+
+@font-face {
+  font-family: 'VolvoNovum';
+  font-weight: 400;
+  src: url(../font/volvo-novum-medium.woff2);
+}
+
+@font-face {
+  font-family: 'VolvoNovum';
+  font-weight: 500;
+  src: url(../font/volvo-novum-bold.woff2);
+}
+
+@font-face {
+font-family: 'VolvoSansWeb';
+font-weight: 300;
+src: url(../font/VolvoSansWeb-Light.woff);
+}
+
+@font-face {
+font-family: 'VolvoSansWeb';
+font-weight: 400;
+src: url(../font/VolvoSansWeb-Regular.woff);
+}
+
+@font-face {
+font-family: 'VolvoBroad';
+font-weight: 300;
+src: url(../font/volvo-broad-latin-rest.woff2);
+}

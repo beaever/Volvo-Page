@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* reset */
+
+
+
+/* common */
+
+
+
+/* main */
+
+
+
+/* sub (common) */
+
+
+
+/* sub */
+
+
+
+
+/* module */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+main {display: block;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table, blockquote {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit; text-decoration: inherit;}
+a img {border: none;}
+img {vertical-align: middle; max-width: 100%;}
+li {list-style: none;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i.fas, i.far, i.fal, i.fad, i.fab {position: relative; display: inline-block; vertical-align: middle;}
+i.fas span, i.far span, i.fal span, i.fad span, i.fab span {position: absolute; overflow: hidden; text-indent: -999px;}
+.pc {display: none !important;}
+br.only-pc {content: '';}
+br.only-pc:after {content: '\00a0';}
+.ir-hidden {position: absolute; left: -9999px;}
+
+
+html {font-family: 'NanumSquare', '맑은 고딕', 'malgun gothic', '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif; font-weight: 400; font-size: 13px; color: #333333; background: #ffffff;}
+
+
+
+@media screen and (min-width: 600px) {
+
+}
+
+img.arrow {animation: arrow-effect 0.5s ease 0s infinite alternate forwards;}
+@keyframes arrow-effect {
+    0% {left: 0; opacity: 1;}
+    100% {left: 10px; opacity: 0.6;}
+}
+
+*/

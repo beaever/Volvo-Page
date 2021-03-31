@@ -1,0 +1,480 @@
+@charset "utf-8";
+
+/* reset */
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {
+  margin: 0; padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+li {list-style: none;}
+img {vertical-align: middle;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle; overflow: hidden;}
+i[class^="fa"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+/*
+.mobile {display: none !important;}
+br.only-m {content: '';}
+br.only-m::after {content: '\00a0';}
+*/
+
+
+/* common */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "VolvoNovum",sans-serif,"Arial Narrow","Helvetica Neue","Helvetica","Roboto",Arial,sans-serif;
+  font-size: 1em;
+  font-size: 13px;
+  font-weight: 400;
+  color: #3e4855;
+  background-color: #fafcfe;
+  -webkit-font-smoothing: antialiased;
+}
+
+#wrapper {
+  position: relative;
+  min-width: 850px;
+  overflow: hidden;
+}
+
+#skip-nav {
+  position: fixed;
+  left: 0;
+  top: -40px;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-size: 16px;
+  transition: top 0.3s;
+  z-index: 100000;
+}
+
+#skip-nav:focus {
+  top: 0;
+}
+
+.float--left {
+  float: left;
+}
+
+.float--right {
+  float: right;
+}
+
+
+/* header */
+#header {
+  display: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fafafa;
+  z-index: 1000;
+}
+
+#header .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-right: 16px;
+}
+
+#header a.logo {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0 8px;
+  width: 114px;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+#header a.logo img {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 98px;
+  height: 8px;
+}
+
+#header .gnb {
+  position: absolute;
+  left: calc(100% - 80px);
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-100%, -50%);
+  padding: 0 8px;
+}
+
+#header > .inner > div.gnb:hover > a::before {
+  content: '';
+  clear: both;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+
+#header .gnb .cars-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#header .gnb .cars-btn span {
+  color: #141414;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#header .toggle {
+  position: absolute;
+  left: calc(100% - 36px);
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-100%, -50%);
+  text-indent: -9999px;
+}
+
+#header .toggle:hover {
+  background: #ebebeb;
+  border-radius: 4px;
+}
+
+#header .toggle em {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+}
+
+#header .toggle em::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  transform: translate(0, -20%);
+  width: 22px;
+  height: 1px;
+  background: #000;
+  border-radius: 10px;
+}
+
+#header .toggle em span {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 18px;
+  height: 1px;
+  background: #000;
+}
+
+#header .toggle em::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 80%;
+  transform: translate(0, -80%);
+  width: 20px;
+  height: 1px;
+  background: #000;
+}
+
+@media screen and (min-width: 480px) {
+    #header {
+      height: 64px;
+    }
+
+    #header .logo {
+      margin-left: 16px;
+    }
+
+    #header .logo img {
+      height: 8px;
+    }
+}
+
+
+/* main */
+#main {
+  width: 100%;
+  height: 100%;
+}
+
+/* visual */
+#main section.visual {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 106.24px;
+}
+
+
+#main section.visual .visual-img {
+  background: url(../img/moment-4-promotional-hero-2560x1440.jpg) center center no-repeat;
+  background-size: cover;
+  height: 584px;
+}
+
+#main section.visual > div.content {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  height: 344px;
+  padding: 64px 80px 176px 80px;
+  color: #fff;
+  text-align: center;
+}
+
+#main section.visual > div.content > em {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  display: block;
+  margin: 8px 0;
+  font-style: normal;
+  font-weight: 400;
+}
+
+#main section.visual > div.content > p {
+  font-family: "VolvoBroad", Arial Black, sans-serif;
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+#main section.visual > div.content > div.other-btn {
+  display: block;
+  margin-top: 12px;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+#main section.visual > div.content > div.other-btn > a {
+  font-weight: 500;
+}
+
+#main section.visual > div.content > div.other-btn > a:hover {
+  color: #a3a3a3;
+}
+
+#main section.visual > div.content > div.other-btn > a > span {
+  display: block;
+  text-indent: -9999px;
+}
+
+#main section.visual > div.content > div.other-btn > a > span > em {
+  margin: 0 0 0 8px;
+}
+
+/* text-visual */
+#main section.text-visual {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 53.12px;
+  box-sizing: border-box;
+}
+
+#main section.text-visual div.text-visual-content {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#main section.text-visual div.text-visual-content > p {
+  display: block;
+  margin: 0 auto;
+  max-width: 708.9px;
+  padding: 16px 0 ;
+  color: #707070;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.125;
+}
+
+#main section.text-visual div.text-visual-content > p > em {
+  color: #141414;
+}
+
+/* model-visual */
+#main section.model-visual {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+#main section.model-visual div.model-visual-inner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#main section.model-visual div.model-visual-inner div.model-visual-title {
+  position: relative;
+  max-width: 604.2px;
+  margin: 0 auto;
+  width: 100%;
+  height: 92px;
+  text-align: center;
+}
+
+#main section.model-visual div.model-visual-inner div.model-visual-title > h2 {
+  display: block;
+  margin: 0 auto;
+  font-size: 32px;
+  font-weight: 500;
+  color: #141414;
+}
+
+#main section.model-visual div.model-visual-inner div.model-visual-content {
+  display: flex;
+  justify-content: center;
+  text-indent: -9999px;
+}
+
+#main section.model-visual div.model-visual-inner div.model-visual-content > div.img-content {
+  position: relative;
+  display: block;
+  width: 604px;
+  height: 453px;
+}
+
+#main section.model-visual div.model-visual-inner div.model-visual-content > div.img-content + div.img-content{
+  margin-left: 24px;
+}
+
+
+span.content1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../img/s90-recharge-desktop-4x3.jpg) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+span.content2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../img/xc90-recharge-desktop-4x3.jpg) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#main section.model-visual div.model-visual-inner div.model-visual-content > div.img-content > a > .img-content-title {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  padding-top: 48px;
+}
+
+
+.img-content-title > em {
+  display: block;
+  color: #000;
+  padding-bottom: 16px;
+}
+
+.img-content-title > h3 {
+  display: block;
+  color: #000;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  font-size: 40px;
+  padding: 0 16px 16px 16px;
+}
+
+
+/* sub (common) */
+
+
+
+/* sub */
+
+
+
+
+/* module */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+main {display: block;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table, blockquote {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit; text-decoration: inherit;}
+a img {border: none;}
+img {vertical-align: middle;}
+li {list-style: none;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i.fas, i.far, i.fal, i.fad, i.fab {position: relative; display: inline-block; vertical-align: middle;}
+i.fas span, i.far span, i.fal span, i.fad span, i.fab span {position: absolute; overflow: hidden; text-indent: -999px;}
+.mobile {display: none !important;}
+br.only-m {content: '';}
+br.only-m:after {content: '\00a0';}
+.ir-hidden {position: absolute; left: -9999px;}
+
+
+html {font-family: 'NanumSquare', '맑은 고딕', 'malgun gothic', '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif; font-weight: 400; font-size: 13px; color: #333333; background: #ffffff;}
+
+
+@media screen and (max-width: 1200px) {
+
+}
+
+img.arrow {animation: arrow-effect 0.5s ease 0s infinite alternate forwards;}
+@keyframes arrow-effect {
+    0% {left: 0; opacity: 1;}
+    100% {left: 10px; opacity: 0.6;}
+}
+
+*/
+
