@@ -13,27 +13,114 @@
   <link rel="stylesheet" href="/css/web-font.css" />
   <link rel="stylesheet" href="/css/style-pc.css" media="screen and (min-width: 850px)" />
   <link rel="stylesheet" href="/css/style-m.css" media="screen and (max-width: 850px)" />
+  <!-- Jquery CDN -->
   <script src="/js/jquery-3.5.1.min.js"></script>
-  <script src="/js/dino-common.js"></script>
+  <script src="/js/thebeaever-common.js"></script>
+  <!-- font awesome CDN -->
+  <script src="https://use.fontawesome.com/25f95af6be.js"></script>
 </head>
 
 <body class="main">
-
-  <div class="wrapper">
+  <div class="wrapper" id="wrapper">
     <a href="#main" id="skip-nav">본문 바로가기</a>
-
     <header id="header">
       <div class="inner">
 
         <a href="#" class="logo"><img src="./img/volvo-wordmark-black.svg" alt="Volvo 로고"></a>
 
         <div class="gnb">
-          <a href="#" class="cars-btn"><span>Cars</span></a>
+          <a href="#" class="cars-quick-link-btn"><span>Our&nbsp;Cars</span></a>
         </div>
+        <nav id="quick-link-cars">
+          <div class="quick-link-cars-container">
 
+          </div>
+        </nav>
         <!-- Global Navgation Bar -->
         <a href="#" class="toggle"><em><span>OPEN&CLOSE</span></em></a>
-        <nav id="quick-link"></nav>
+        <nav id="quick-link">
+          <ul class="side-logo-box">
+            <li>
+              <a href="#" class="side-logo">
+                <img src="./img/volvo-wordmark-black.svg" alt="Volvo 로고">
+              </a>
+            </li>
+          </ul>
+          <ul class="start-menu">
+            <li><a href="#">Buy
+                <div class="right-arrow">
+                  <svg fill="none" viewBox="0 0 24 24" preserveAspectRatio="xMinYMid">
+                    <path d="M9 5l7 7-7 7" stroke="currentColor" data-autoid="chevron:0" stroke-linecap="round"
+                      stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></path>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li><a href="#">Find A Dealer</a></li>
+            <li>
+              <a href="#">Service
+                <div class="right-arrow">
+                  <svg fill="none" viewBox="0 0 24 24" preserveAspectRatio="xMinYMid">
+                    <path d="M9 5l7 7-7 7" stroke="currentColor" data-autoid="chevron:0" stroke-linecap="round"
+                      stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></path>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li><a href="#">Used</a></li>
+            <li>
+              <a href="#">Why Volvo
+                <div class="right-arrow">
+                  <svg fill="none" viewBox="0 0 24 24" preserveAspectRatio="xMinYMid">
+                    <path d="M9 5l7 7-7 7" stroke="currentColor" data-autoid="chevron:0" stroke-linecap="round"
+                      stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></path>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">More
+                <div class="right-arrow">
+                  <svg fill="none" viewBox="0 0 24 24" preserveAspectRatio="xMinYMid">
+                    <path d="M9 5l7 7-7 7" stroke="currentColor" data-autoid="chevron:0" stroke-linecap="round"
+                      stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></path>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="language">
+                Korea
+                <div class="right-arrow">
+                  <svg fill="none" viewBox="0 0 24 24" preserveAspectRatio="xMinYMid">
+                    <path d="M9 5l7 7-7 7" stroke="currentColor" data-autoid="chevron:0" stroke-linecap="round"
+                      stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></path>
+                  </svg>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="sns-container">
+            <div class="sns-icon">
+              <li>
+                <a href="https://www.facebook.com/volvocarkr/" class="facebook">
+                  <i class="fab fa-facebook-square"><span>facebook</span></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/volvocarkr/" class="instagram">
+                  <i class="fab fa-instagram"><span>instagram</span></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/VolvoCarsNews" class="youtube">
+                  <i class="fab fa-youtube"><span>youtube</span></i>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </nav> <!-- quick-link -->
       </div> <!-- inner -->
     </header>
 
@@ -42,8 +129,11 @@
         <div class="content">
           <em>Climate change is</em>
           <p>THE ULTIMATE SAFETY TEST</p>
-          <div class="other-btn">
-            <a href="#">더 알아보기<span><em>오른쪽 화살표</em></span></a>
+          <div class="other-button">
+            <a href="#">더 알아보기
+              <svg class="right-arrow-svg" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+           
           </div>
         </div>
         <div class="visual-img"></div>
@@ -59,48 +149,296 @@
 
       <section class="model-visual">
         <div class="model-visual-inner">
+
           <div class="model-visual-title">
             <h2>주요 모델</h2>
           </div>
           <div class="model-visual-content">
+
             <div class="img-content">
-              <div class="img-content-title">
-                <em>S90 Recharge</em>
-                <h3>Expect more.</h3>
-                <span>소비자 판매가격 <em>KRW85,400,000</em></span>
-              </div>
+
               <a href="#">
-                <span class="car-img content1">충전 중인 회색 Volvo S90 앞에 서 있는 남성</span>
+                <div class="img-content-title">
+                  <div class="title-box-header">
+                    <em>S90 Recharge</em>
+                  </div>
+                  <div class="title-box-main">
+                    <h3>Expect more.</h3>
+                  </div>
+                  <div class="title-box-footer">
+                    <span>소비자 판매가격 <em>KRW85,400,000</em></span>
+                  </div>
+                </div>
+                <img src="./img/s90-recharge-desktop-4x3.jpg" alt="충전 중인 회색 Volvo S90 앞에 서 있는 남성"
+                  class="car-img content1">
               </a>
-            </div>
+
+              <div class="img-content-info">
+                <div class="img-info">
+                  <a href="#">자세히 보기
+                    <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </a>
+                  <a href="#">탐색하기
+                    <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </a>
+                </div>
+              </div>
+
+            </div> <!-- img-content  -->
+
             <div class="img-content">
-              <a href="#"><span class="car-img content2">스튜디오에 설치된 전기 Volvo V90</span></a>
-            </div>
+
+              <a href="#">
+                <div class="img-content-title">
+                  <div class="title-box-header">
+                    <em>XC90 Recharge</em>
+                  </div>
+                  <div class="title-box-main">
+                    <h3>For life.</h3>
+                  </div>
+                  <div class="title-box-footer">
+                    <span>소비자 판매가격 <em>KRW92,900,000</em></span>
+                  </div>
+                </div>
+
+                <img src="./img/xc90-recharge-desktop-4x3.jpg" alt="스튜디오에 설치된 전기 Volvo V90" class="car-img content2">
+              </a>
+
+              <div class="img-content-info">
+                <div class="img-info">
+                  <a href="#">자세히 보기
+                    <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </a>
+                  <a href="#">탐색하기
+                    <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </a>
+                </div>
+              </div>
+
+            </div> <!-- img-content -->
+          </div> <!-- model-visual-content -->
+        </div> <!-- model-visual-inner -->
+      </section>
+
+      <section class="model-list-visual">
+        <div class="model-list-inner">
+          
+          <div class="model-list-header">
+            <h2>모든 Recharge 모델</h2>
           </div>
-            <a href="#">자세히 보기 <span>></span></a>
-            <a href="#">탐색하기 <span>></span></a>
-            <a href="#">자세히 보기 <span>></span></a>
-            <a href="#">탐색하기 <span>></span></a>
+
+          <div id="indicator-container">
+            <ul class="model-list-indicator">
+              <li>
+                <a href="#">
+                  <div class="indicator-header">
+                    <em>SUV</em>
+                    <h3><em>XC90 Recharge</em><span>플러그인 하이브리드</span></h3>
+                    <span>소비자 판매가격 <em>KRW92,900,000</em></span>
+                  </div>
+                  <div>
+                    <img src="./img/xc90_recharge_responsive.webp"
+                      alt="버치 라이트 Volvo SUV XC90 Recharge 플러그인 하이브리드가 스튜디오의 회색 바닥에 세워져 있습니다" class="indicator-img">
+                  </div>
+                </a>
+                <div class="indicator-footer">
+                  <a href="#">자세히 보기
+                    <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </a>
+                  <a href="#">탐색하기
+                    <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="indicator-header">
+                    <em>SUV</em>
+                    <h3><em>XC60 Recharge</em><span>플러그인 하이브리드</span></h3>
+                    <span>소비자 판매가격 <em>KRW71,000,000</em></span>
+                  </div>
+                  <div>
+                    <img src="./img/xc60_recharge_1800x860.webp"
+                      alt="아이스 화이트 Volvo SUV XC60 Recharge 플러그인 하이브리드가 스튜디오의 회색 바닥에 세워져 있습니다" class="indicator-img">
+                  </div>
+                </a>
+                <div class="indicator-footer">
+                  <a href="#">자세히 보기
+                    <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </a>
+                  <a href="#">탐색하기
+                    <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="indicator-header">
+                    <em>SEDAN</em>
+                    <h3><em>S90 Recharge</em><span>플러그인 하이브리드</span></h3>
+                    <span>소비자 판매가격 <em>KRW85,400,000</em></span>
+                  </div>
+                  <div>
+                    <img src="./img/s90_recharge_responsive.webp"
+                      alt="그레이 Volvo 세단 S90 Recharge 플러그인 하이브리드가 스튜디오의 회색 바닥에 세워져 있습니다" class="indicator-img">
+                  </div>
+                </a>
+                <div class="indicator-footer">
+                  <a href="#">자세히 보기
+                    <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </a>
+                  <a href="#">탐색하기
+                    <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </a>
+                </div>
+              </li>
+            </ul> <!-- model-list-indicator-->
+            <p class="control">
+              <a href="#" class="prev"><i class="fas fa-angle-left"></i></a>
+              <a href="#" class="next"><i class="fas fa-angle-right"></i></a>
+            </p>
+          </div>
+
+          <div class="model-list-footer">
+            <a href="#">RECHARGE
+              <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+            <a href="#">마일드 하이브리드
+              <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+          </div>
+        </div> <!-- model-list-inner -->
+      </section> <!-- model-list-visual -->
+
+      <section class="volvo-info">
+        <div class="info-inner">
+
+          <div class="info-title">
+            <h2>Why Volvo?</h2>
+          </div>
+          <div class="info-img">
+            <span>주차된 차량 뒷자리에 앉아있는 어린이</span>
+          </div>
+          <div class="info-body">
+            <div class="info-body-box">
+              <h3>Making your life easier</h3>
+              <span>A에서 B로 이동하는 새로운 여정을 제안합니다. 원하는 시간에, 원하는 방식으로 볼보를 이용할 수 있습니다.</span>
+            </div>
+
+            <div class="info-body-box">
+              <h3>Our future is electric</h3>
+              <span>볼보의 자동차는 전기 동력을 사용할 수 있습니다. 당신이 일상 생활에서 환경에 미치는 영향을 줄일 수 있도록 돕습니다.</span>
+            </div>
+
+            <div class="info-body-box">
+              <h3>Protecting what’s important</h3>
+              <span>볼보는 지금껏 지켜온 안전에 관한 유산을 자랑스럽게 여깁니다. 우리는 중요한 것을 보호할 수 있는 새로운 방법을 계속해서 혁신해 나갈 것입니다.</span>
+            </div>
+
+          </div>
+
+          <div class="info-button-container">
+            <a href="#">
+              <div class="info-button">
+                자세히 보기
+              </div>
+            </a>
+          </div>
+
+        </div> <!-- info-inner-->
+      </section> <!-- volvo-info -->
+
+      
+
+      <section class="link-cars">
+        <div class="link-cars-container">
+          <h2>Quick Links</h2>
+          <div class="flex-box">
+            <a href="#" class="link-list1 cars-box">
+              <div class="item">Test Drive</div>
+              <div class="right-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 12">
+                  <path d="M3.63397441 6.00012725L0 .71516521.87426775 0 5 6.00013536.87436041 12l-.87426062-.7151756z">
+                  </path>
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="link-list2 cars-box">
+              <div class="item">Find a Dealer</div>
+              <div class="right-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 12">
+                  <path d="M3.63397441 6.00012725L0 .71516521.87426775 0 5 6.00013536.87436041 12l-.87426062-.7151756z">
+                  </path>
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="link-list3 cars-box">
+              <div class="item">Newseletter</div>
+              <div class="right-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 12">
+                  <path d="M3.63397441 6.00012725L0 .71516521.87426775 0 5 6.00013536.87436041 12l-.87426062-.7151756z">
+                  </path>
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="link-list4 cars-box">
+              <div class="item">News & Event</div>
+              <div class="right-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 12">
+                  <path d="M3.63397441 6.00012725L0 .71516521.87426775 0 5 6.00013536.87436041 12l-.87426062-.7151756z">
+                  </path>
+                </svg>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
+      <section class="cars-news">
+        <p>* 본 사이트에 기재된 내용은 사전 예고 없이 변경될 수 있으며 실제 판매 차량과 상이할 수 있습니다.<br />
+          * 본 페이지의 이미지는 실제 판매 차량과 상이할 수 있습니다.<br />
+          * 본 사이트는 Chrome 브라우저에 최적화되어 있습니다.</p>
+      </section>
     </main>
-
     <footer id="footer">
-      <ul></ul>
+      <div id="footer-inner">
+        <div class="footer-inner-header">
+          <div class="footer-box"><a href="#">쿠키</a></div>
+          <div class="footer-box"><a href="#">법적고지사항</a></div>
+          <div class="footer-box"><a href="#">개인정보처리방침</a></div>
+        </div>
+        <div class="footer-inner-body">
+          <span>Copyright © 2021 Volvo Car Corporation (또는 계열사 또는 라이센스 제공자)</span>
+        </div>
+        <div class="footer-inner-footer">
+          <span>본 사이트는 Chrome 브라우저에 최적화되어 있습니다.</span>
+        </div>
+      </div>
     </footer>
 
-    <div id="footer-fixed">
-
-    </div>
+    
 
   </div> <!-- wrapper -->
 
-
-
-
   <script>
     'use strict';
+
+    $('#header a.toggle').on('click', function () {
+      $('#wrapper').toggleClass('open');
+    });
+    $('#header ')
   </script>
 </body>
 
