@@ -29,25 +29,41 @@
         <a href="#" class="logo"><img src="./img/volvo-wordmark-black.svg" alt="Volvo 로고"></a>
 
         <div class="gnb">
+          <!-- OurCars Click Event -->
           <a href="#" class="cars-quick-link-btn"><span>Our&nbsp;Cars</span></a>
         </div>
+        
         <nav id="quick-link-cars">
           <div class="quick-link-cars-container">
 
           </div>
+          <!-- Menu Drop Down Event -->
+          <a href="#" class="toggle"><em><span>OPEN</span></em></a>
         </nav>
+
         <!-- Global Navgation Bar -->
-        <a href="#" class="toggle"><em><span>OPEN&CLOSE</span></em></a>
         <nav id="quick-link">
           <ul class="side-logo-box">
             <li>
               <a href="#" class="side-logo">
                 <img src="./img/volvo-wordmark-black.svg" alt="Volvo 로고">
               </a>
+              <div class="space-box"></div>
+              <div class="side-toggle-container">
+                <a href="#" class="side-toggle">
+                  <svg viewBox="0 0 24 24" class="close-toggle-btn">
+                    <path stroke="currentColor" d="M4.222 4.222l15.556 15.556M4.222 19.778L19.778 4.222"></path>
+                  </svg>
+                  <em>
+                    <span>CLOSE</span>
+                  </em>
+                </a>
+              </div>
             </li>
           </ul>
           <ul class="start-menu">
-            <li><a href="#">Buy
+            <li>
+              <a href="#">Buy
                 <div class="right-arrow">
                   <svg fill="none" viewBox="0 0 24 24" preserveAspectRatio="xMinYMid">
                     <path d="M9 5l7 7-7 7" stroke="currentColor" data-autoid="chevron:0" stroke-linecap="round"
@@ -89,15 +105,17 @@
               </a>
             </li>
             <li>
-              <a href="#" class="language">
-                Korea
-                <div class="right-arrow">
-                  <svg fill="none" viewBox="0 0 24 24" preserveAspectRatio="xMinYMid">
-                    <path d="M9 5l7 7-7 7" stroke="currentColor" data-autoid="chevron:0" stroke-linecap="round"
-                      stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></path>
-                  </svg>
-                </div>
-              </a>
+              <div class="language-container">
+                <a href="#" class="language">
+                  <span>Korea</span>
+                  <div class="right-arrow">
+                    <svg fill="none" viewBox="0 0 24 24" preserveAspectRatio="xMinYMid">
+                      <path d="M9 5l7 7-7 7" stroke="currentColor" data-autoid="chevron:0" stroke-linecap="round"
+                        stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
             </li>
           </ul>
 
@@ -436,9 +454,12 @@
     'use strict';
 
     $('#header a.toggle').on('click', function () {
-      $('#wrapper').toggleClass('open');
+      $('#wrapper').addClass('open');
     });
-    $('#header ')
+    $('#quick-link .side-toggle-container').on('click', function() {
+      $('#wrapper').removeClass('open');
+    });
+
   </script>
 </body>
 
