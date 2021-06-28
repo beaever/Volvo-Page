@@ -551,8 +551,34 @@ body {
 
 /* ourcars-list-items-pluginSedan */
 .ourcars-list-items-pluginSedan {
-  display: flex;
+  display: block;
 }
+
+.pluginSedan-img-container {
+  display: flex;
+  padding: 16px 0 24px 0;
+}
+
+.pluginSedan-img-container .sedan-info {
+  margin: 0 24px;
+  color: #141414;
+}
+.pluginSedan-img-container .sedan-info h4 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-style: normal;
+}
+
+.pluginSedan-img-container .sedan-info span {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.pluginSedan-img-items {
+  max-height: 56px;
+}
+
 /* main */
 #main {
   position: relative;
