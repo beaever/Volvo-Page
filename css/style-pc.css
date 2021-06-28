@@ -221,36 +221,6 @@ body {
   font-weight: 400;
 }
 
-/* quick-link-cars */
-#quick-link-cars
-
-
-/* cars-quick-link */
-.cars-quick-link {
-  position: fixed;
-  display: none;
-  top: 64px;
-  height: 100vh;
-  background: #fff;
-}
-
-.cars-quick-link > .cars-quick-link-container {
-  width: 100%;
-  height: 100%;
-}
-
-.cars-quick-link > .cars-quick-link-container > .cars-quick-link-item {
-  display: flex;
-  width: 100vh;
-  height: 80vh;
-  background: red;
-}
-
-.cars-quick-link > .cars-quick-link-container {
-  
-}
-
-
 #header .toggle {
   position: absolute;
   left: calc(100% - 36px);
@@ -308,8 +278,6 @@ body {
 }
 
 /* toggle */
-
-
 #quick-link {
   position: fixed;
   right: -400px;
@@ -473,6 +441,118 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* OurCars */
+#ourcars {
+  position: relative;
+  top: 64px;
+  background: #fff;
+  height: 100%;
+  padding: 24px 40px 0 40px;
+  margin: 0 20px;
+}
+
+#ourcars > .ourcars-container {
+  display: flex;
+}
+
+#ourcars > .ourcars-container > .ourcars-menu-container {
+  display: flex;
+  max-width: 25%;
+  height: 80vh;
+  padding-left: 12px;
+  padding-right: 24px;
+  border-right: 1px solid #ebebeb;
+  color: #141414;
+}
+
+#ourcars > .ourcars-container > .ourcars-menu-container > .ourcars-menu-items > .space-box {
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+}
+
+.ourcars-menu-items1 {
+  display: flex;
+  height: 64px;
+  align-items: center;
+}
+
+.ourcars-menu-items2 {
+  display: flex;
+  height: 64px;
+  align-items: center;
+}
+/* ourcars-list-container */
+#ourcars > .ourcars-container > .ourcars-list-container {
+  position: relative;
+  display: flex;
+  padding: 0 12px;
+  max-width: 75%;
+  width: 100%;
+  height: 80vh;
+  overflow: scroll;
+}
+
+#ourcars > .ourcars-container > .ourcars-list-container > .ourcars-list-items {
+  display: grid;
+  margin: 0 0 24px;
+  padding: 0 0 0 24px;
+  grid-template-columns: repeat(auto-fit, minmax(max-content, 180px));
+}
+
+#ourcars > .ourcars-container > .ourcars-list-container > .ourcars-list-items > .pluginSuv {
+  display: block;
+  max-height: 46px;
+}
+
+#ourcars > .ourcars-container > .ourcars-list-container > .ourcars-list-items h3 {
+  display: block;
+  margin: 0 24px;
+  padding: 12px 0;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1c6bba;
+  grid-column: 1 / -1;
+}
+
+.pluginSuv-img-container {
+  display: flex;
+  padding: 16px 0 24px 0;
+}
+
+.pluginSuv-img-container .suv-info {
+  margin: 0 24px;
+  color: #141414;
+}
+.pluginSuv-img-container .suv-info h4 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-style: normal;
+}
+
+.pluginSuv-img-container .suv-info span {
+  font-size: 12px;
+  font-weight: 200;
+}
+.img-container {
+  position: relative;
+  display: block;
+  margin: 16px 16px;
+  height: 56px;
+}
+
+.pluginSuv-img-items {
+  max-height: 56px;
+}
+
+/* ourcars-list-items-pluginSedan */
+.ourcars-list-items-pluginSedan {
+  display: flex;
+}
 /* main */
 #main {
   position: relative;
