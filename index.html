@@ -8,6 +8,14 @@
   <meta name="apple-mobile-web-app-title" content="볼보 공식 사이트" />
   <title>Korea | Volvo Cars</title>
   <meta name="description" content="Volvo Car 공식 사이트" />
+
+  <!-- volvo The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Volvo" />
+  <meta property="og:title" content="Volvo Korea" />
+  <meta property="og:description" content="Volvo Korea Page Copy_thebeaever" />
+  <meta property="og:image" content="./img/volvo-wordmark-black" />
+  <meta property="og.url" content="http://127.0.0.1:5500/index.html">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="/fa/css/all.min.css" />
   <link rel="stylesheet" href="/css/web-font.css" />
@@ -715,7 +723,7 @@
       $('#wrapper').toggleClass('dropDown');
       $('#ourCars').toggleClass('hide');
     });
-    
+
     $('#ourCars-toggle-btn').on('click', function() {
         $('#wrapper').removeClass('dropDown');
         $('#ourCars').removeClass('hide');
