@@ -155,29 +155,29 @@
       <div class="ourcars-container">
         <div class="ourcars-menu-container">
         
-          <div class="ourcars-menu-items">
-            <div class="ourcars-menu-items1">
-              <a href="#" class="items1">
+          <div class="ourcars-menu-items-master" role="tablist">
+            <button class="ourcars-menu-items" id="plugin-anchor" type="button" role="tab" aria-controls="plugin" aria-selected="ture">
+              <a href="#" class="items plugin">
                 <h2>
                   Plug-in&nbsp;hybrids
                 </h2>
                 <span>플러그인&nbsp;하이브리드</span>
               </a>
-            </div> <!-- items1 -->
+            </button> <!-- items1 -->
             <div class="space-box">
               <span>SpaceBox</span>
             </div>
-            <div class="ourcars-menu-items2"> 
-              <a href="#" class="items2">
+            <button class="ourcars-menu-items" id="mild-anchor" type="button" role="tab" aria-controls="mild" aria-selected="false"> 
+              <a href="#" class="items mild">
                 <h2>Mild&nbsp;hybrids</h2>
                   <span>마일드&nbsp;하이브리드</span>
               </a>
-            </div> <!-- items2 -->
+            </button> <!-- items2 -->
           </div> <!-- ourcars-menu-items-->
 
         </div> <!-- ourcars-menu-container --> 
         
-          <div class="ourcars-list-container">
+          <div class="ourcars-list-container" tabindex="0" role="tabpanel" aria-labelledby="plugin-anchor">
             <div class="ourcars-list-items">
               <div class="ourcars-list-items-pluginSuv">
                   <a href="#" class="pluginSuv">
@@ -186,8 +186,9 @@
                       <path d="M2 1.5l4 4-4 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     </h3>
                   </a>
+                  
                   <div class="img-master">
-                    <div class="img-container-box">
+                    <div class="img-container-box fade">
                       <a href="#" class="hover">
                         <div class="ourCars-info">
                           <h4>XC90&nbsp;Recharge</h4>
@@ -201,7 +202,7 @@
                         </div>
                       </a>
                     </div>
-                    <div class="img-container-box">
+                    <div class="img-container-box fade">
                       <a href="#" class="hover">
                         <div class="ourCars-info">
                           <h4>XC60&nbsp;Recharge</h4>
@@ -218,6 +219,7 @@
                     </div>
                   </div>
               </div> <!-- ourcars-list-items-pluginSuv -->
+
               <div class="ourcars-list-items-pluginSedan">
                 <a href="#" class="pluginSedan">
                   <h3>SEDAN
@@ -245,10 +247,9 @@
           </div> 
           
           <!-- Mild Hybrid -->
-          
-          <div class="ourcars-list-container hide">
+          <div class="ourcars-list-container" tabindex="0" role="tabpanel" aria-labelledby="mild-anchor" aria-hidden="false">
             <div class="ourcars-list-items">
-              <div class="ourcars-list-items-pluginSuv">
+              <div class="ourcars-list-items-mildHybridSuv">
                   <a href="#" class="pluginSuv">
                     <h3>SUV
                       <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -304,7 +305,7 @@
                   </div>
               </div> <!-- ourcars-list-items-pluginSuv -->
 
-              <div class="ourcars-list-items-pluginSedan">
+              <div class="ourcars-list-items-mildHybridSedan">
                 <a href="#" class="pluginSedan">
                   <h3>SEDAN
                     <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -347,7 +348,7 @@
                 </div>
               </div>  <!-- ourcars-list-items-pluginSedan -->
 
-              <div class="ourcars-list-items-pluginSedan">
+              <div class=".ourcars-list-items-mildHybridCrossCountry">
                 <a href="#" class="mildHybrid-CrossCountry">
                   <h3>CROSS COUNTRY
                     <svg class="right-arrow-svg-black" width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -402,9 +403,13 @@
                 <span>CLOSE</span>
               </em>
             </a>
-          </div>
-      </div>
-    </div>
+          </div> <!-- OurCars-toggle -->
+      </div> <!-- OurCars-container -->
+      <button id="ourCars-window-close">
+        <span>CLOSE</span>
+      </button>
+    </div> <!-- OurCars -->
+
     <main id="main">
       <section class="visual">
         <div class="content">
@@ -721,13 +726,18 @@
 
     $('#header a.ourCars-open').on('click', function() {
       $('#wrapper').toggleClass('dropDown');
-      $('#ourCars').toggleClass('hide');
+      $('#ourCars').toggleClass('show-drop');
     });
 
-    $('#ourCars-toggle-btn').on('click', function() {
+    $('.ourCars-toggle-container').on('click', function() {
         $('#wrapper').removeClass('dropDown');
-        $('#ourCars').removeClass('hide');
+        $('#ourCars').removeClass('show-drop');
       })
+    
+      $('#ourCars-window-close').on('click', function() {
+        $('#wrapper').removeClass('dropDown');
+        $('#ourCars').removeClass('show-drop');
+      });
 
 
   </script>
