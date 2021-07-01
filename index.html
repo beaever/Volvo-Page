@@ -20,10 +20,10 @@
   <link rel="stylesheet" href="/fa/css/all.min.css" />
   <link rel="stylesheet" href="/css/web-font.css" />
   <link rel="stylesheet" href="/css/style-pc.css"/>
- 
+
   <!-- Jquery CDN -->
   <script src="/js/jquery-3.5.1.min.js"></script>
-  <script src="/js/thebeaever-common.js"></script>
+  <script src="./js/thebeaever-common.js"></script>
 </head>
 
 <body class="main">
@@ -152,32 +152,31 @@
 
     <!-- Our Cars container -->
     <div id="ourCars">
-      <div class="ourcars-container">
+      <div class="ourcars-container" role="tablist">
         <div class="ourcars-menu-container">
         
-          <div class="ourcars-menu-items-master" role="tablist">
-            <button class="ourcars-menu-items" id="plugin-anchor" type="button" role="tab" aria-controls="plugin" aria-selected="ture">
-              <a href="#" class="items plugin">
+          <div class="ourcars-menu-items-master">
+            <button class="ourcars-menu-items items plugin" id="plugin-tab" type="button" role="tab" aria-controls="plugin" aria-selected="ture" tabindex="0">
                 <h2>
                   Plug-in&nbsp;hybrids
                 </h2>
                 <span>플러그인&nbsp;하이브리드</span>
-              </a>
             </button> <!-- items1 -->
+
             <div class="space-box">
               <span>SpaceBox</span>
             </div>
-            <button class="ourcars-menu-items" id="mild-anchor" type="button" role="tab" aria-controls="mild" aria-selected="false"> 
-              <a href="#" class="items mild">
+
+            <button class="ourcars-menu-items items mild" id="mild-tab" type="button" role="tab" aria-controls="mild" aria-selected="false" tabindex="-1"> 
                 <h2>Mild&nbsp;hybrids</h2>
                   <span>마일드&nbsp;하이브리드</span>
-              </a>
             </button> <!-- items2 -->
           </div> <!-- ourcars-menu-items-->
 
         </div> <!-- ourcars-menu-container --> 
         
-          <div class="ourcars-list-container" tabindex="0" role="tabpanel" aria-labelledby="plugin-anchor">
+        <!-- Plugin -->
+          <div class="ourcars-list-container" id="plugin" role="tabpanel" tabindex="0" aria-labelledby="plugin-tab" >
             <div class="ourcars-list-items">
               <div class="ourcars-list-items-pluginSuv">
                   <a href="#" class="pluginSuv">
@@ -247,7 +246,7 @@
           </div> 
           
           <!-- Mild Hybrid -->
-          <div class="ourcars-list-container" tabindex="0" role="tabpanel" aria-labelledby="mild-anchor" aria-hidden="false">
+          <div class="ourcars-list-container" id="mild" role="tabpanel" tabindex="0" aria-labelledby="mild-tab" hidden>
             <div class="ourcars-list-items">
               <div class="ourcars-list-items-mildHybridSuv">
                   <a href="#" class="pluginSuv">

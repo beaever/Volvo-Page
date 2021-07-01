@@ -1,12 +1,5 @@
 @charset "utf-8";
 /* reset */
-button {
-  background: transparent;
-  border: none;
-  color: #141414;
-
-}
-
 h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {
   margin: 0; padding: 0;
 }
@@ -508,16 +501,20 @@ body {
   align-items: center;
   box-sizing: border-box;
   padding: 0;
+  color: #141414;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .items {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .ourcars-menu-items h2 {
-  width: 100%;
   font-size: 20px;
   max-height: 28px;
   height: 100%;
@@ -700,7 +697,6 @@ body {
   text-indent: -9999px;
   cursor: pointer;
 }
-
 
 /* main */
 #main {
