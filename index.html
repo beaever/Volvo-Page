@@ -156,7 +156,7 @@
         <div class="ourcars-menu-container">
         
           <div class="ourcars-menu-items-master">
-            <button class="ourcars-menu-items items plugin" id="plugin-tab" type="button" role="tab" aria-controls="plugin" aria-selected="ture" tabindex="0">
+            <button class="ourcars-menu-items items" id="plugin-tab" onclick="openMenu('plugin')" role="tab" aria-controls="plugin" aria-selected="ture" tabindex="0">
                 <h2>
                   Plug-in&nbsp;hybrids
                 </h2>
@@ -167,7 +167,7 @@
               <span>SpaceBox</span>
             </div>
 
-            <button class="ourcars-menu-items items mild" id="mild-tab" type="button" role="tab" aria-controls="mild" aria-selected="false" tabindex="-1"> 
+            <button class="ourcars-menu-items items" id="mild-tab" onclick="openMenu('mild')" role="tab" aria-controls="mild" aria-selected="false" tabindex="0"> 
                 <h2>Mild&nbsp;hybrids</h2>
                   <span>마일드&nbsp;하이브리드</span>
             </button> <!-- items2 -->
@@ -176,7 +176,7 @@
         </div> <!-- ourcars-menu-container --> 
         
         <!-- Plugin -->
-          <div class="ourcars-list-container" id="plugin" role="tabpanel" tabindex="0" aria-labelledby="plugin-tab" >
+          <div class="ourcars-list-container list" id="plugin" role="tabpanel" tabindex="0" aria-labelledby="plugin-tab" >
             <div class="ourcars-list-items">
               <div class="ourcars-list-items-pluginSuv">
                   <a href="#" class="pluginSuv">
@@ -246,7 +246,7 @@
           </div> 
           
           <!-- Mild Hybrid -->
-          <div class="ourcars-list-container" id="mild" role="tabpanel" tabindex="0" aria-labelledby="mild-tab" hidden>
+          <div class="ourcars-list-container list" id="mild" role="tabpanel" tabindex="0" aria-labelledby="mild-tab" hidden>
             <div class="ourcars-list-items">
               <div class="ourcars-list-items-mildHybridSuv">
                   <a href="#" class="pluginSuv">
@@ -712,22 +712,25 @@
     
 
   </div> <!-- wrapper -->
+</body>
 
-  <script>
-    'use strict';
-
+<script>
+  'use strict';
+    
     $('#header a.toggle').on('click', function () {
       $('#wrapper').addClass('open');
+      $('#wrapper').removeClass('dropDown');
+      $('#ourCars').removeClass('show-drop');
     });
     $('#quick-link .side-toggle-container').on('click', function() {
       $('#wrapper').removeClass('open');
     });
-
+    
     $('#header a.ourCars-open').on('click', function() {
       $('#wrapper').toggleClass('dropDown');
       $('#ourCars').toggleClass('show-drop');
     });
-
+    
     $('.ourCars-toggle-container').on('click', function() {
         $('#wrapper').removeClass('dropDown');
         $('#ourCars').removeClass('show-drop');
@@ -737,9 +740,6 @@
         $('#wrapper').removeClass('dropDown');
         $('#ourCars').removeClass('show-drop');
       });
-
-
-  </script>
-</body>
+</script>
 
 </html>

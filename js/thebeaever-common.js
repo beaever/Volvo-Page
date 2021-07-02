@@ -1,3 +1,46 @@
+    
+$('#header a.toggle').on('click', function () {
+  $('#wrapper').addClass('open');
+  $('#wrapper').removeClass('dropDown');
+  $('#ourCars').removeClass('show-drop');
+});
+$('#quick-link .side-toggle-container').on('click', function() {
+  $('#wrapper').removeClass('open');
+});
+
+$('#header a.ourCars-open').on('click', function() {
+  $('#wrapper').toggleClass('dropDown');
+  $('#ourCars').toggleClass('show-drop');
+});
+
+$('.ourCars-toggle-container').on('click', function() {
+    $('#wrapper').removeClass('dropDown');
+    $('#ourCars').removeClass('show-drop');
+  })
+
+  $('#ourCars-window-close').on('click', function() {
+    $('#wrapper').removeClass('dropDown');
+    $('#ourCars').removeClass('show-drop');
+  });
+
+
+const ourCarsOpen = document.getElementsByClassName('ourCars-open');
+
+function ourCarsEvent(eventClick) {
+  document.getElementById()
+}
+
+function openMenu(menuClick) {
+  let i;
+  let x = document.getElementsByClassName('list');
+  
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(menuClick).style.display = "flex";
+}
+
+/*
 // common script
 window.addEventListener("DOMCountentLoaded", () => {
   const tabs= document.querySelectorAll('[role="tab"]');
@@ -60,3 +103,4 @@ function changeTabs(e) {
     .querySelector('#${target.getAttribute("aria-controls")}')
     .removeAttribute('hidden');
 }
+*/
