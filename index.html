@@ -17,9 +17,10 @@
   <meta property="og:image" content="./img/volvo-wordmark-black" />
   <meta property="og.url" content="http://127.0.0.1:5500/index.html">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="/fa/css/all.min.css" />
-  <link rel="stylesheet" href="/css/web-font.css" />
-  <link rel="stylesheet" href="/css/style-pc.css"/>
+  <link rel="stylesheet" href="./fa/css/all.min.css" />
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/web-font.css" />
+  <link rel="stylesheet" href="./css/style.css"/>
 
   <!-- Jquery CDN -->
   <script src="/js/jquery-3.5.1.min.js"></script>
@@ -156,10 +157,8 @@
         <div class="ourcars-menu-container">
         
           <div class="ourcars-menu-items-master">
-            <button class="ourcars-menu-items items" id="plugin-tab" onclick="openMenu('plugin')" role="tab" aria-controls="plugin" aria-selected="ture" tabindex="0">
-                <h2>
-                  Plug-in&nbsp;hybrids
-                </h2>
+            <button class="ourcars-menu-items items menu1" onclick="openMenu('plugin')">
+                <h2>Plug-in&nbsp;hybrids</h2>
                 <span>플러그인&nbsp;하이브리드</span>
             </button> <!-- items1 -->
 
@@ -167,7 +166,7 @@
               <span>SpaceBox</span>
             </div>
 
-            <button class="ourcars-menu-items items" id="mild-tab" onclick="openMenu('mild')" role="tab" aria-controls="mild" aria-selected="false" tabindex="0"> 
+            <button class="ourcars-menu-items items menu2" onclick="openMenu('mild')"> 
                 <h2>Mild&nbsp;hybrids</h2>
                   <span>마일드&nbsp;하이브리드</span>
             </button> <!-- items2 -->
@@ -548,7 +547,7 @@
                     <h3><em>XC60 Recharge</em><span>플러그인 하이브리드</span></h3>
                     <span>소비자 판매가격 <em>KRW71,000,000</em></span>
                   </div>
-                  <div>
+                  <div class="indicator-img-container">
                     <img src="./img/xc60_recharge_1800x860.webp"
                       alt="아이스 화이트 Volvo SUV XC60 Recharge 플러그인 하이브리드가 스튜디오의 회색 바닥에 세워져 있습니다" class="indicator-img">
                   </div>
@@ -740,6 +739,17 @@
         $('#wrapper').removeClass('dropDown');
         $('#ourCars').removeClass('show-drop');
       });
+
+      $('.menu1').on('click', function() {
+        $('.menu1').css({'color' : '#141414'});
+        $('.menu2').css({'color' : '#707070'});
+      });
+
+      $('.menu2').on('click', function() {
+        $('.menu2').css({'color' : '#141414'});
+        $('.menu1').css({'color' : '#707070'});
+      });
+      
 </script>
 
 </html>
