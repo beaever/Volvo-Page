@@ -1,9 +1,14 @@
 
+const wrapper = document.getElementById('wrapper');
+const ourCars = document.getElementById('ourCars');
+const sideToggle = document.getElementsByClassName('toggle');
+
+
 // const ourCarsOpen = document.getElementsByClassName('ourCars-open');
 // const ourCarsWindowClose = document.getElementById('ourCars-window-close');
 
 // function openOurcars() {
-  
+
 // }
 
 
