@@ -55,6 +55,16 @@ body {
   stroke: #1c6bba
 }
 
+.clicked {
+  display: flex;
+  color: #141414;
+}
+
+.nonClick {
+  display: none;
+  color: #707070;
+}
+
 #wrapper.dropDown,
 #wrapper.open {
   height: 100vh
@@ -241,6 +251,7 @@ i[class^="fa"] span {
 #quick-link>ul.side-logo-box>li {
   position: absolute;
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 

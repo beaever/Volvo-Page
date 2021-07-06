@@ -37,7 +37,7 @@
 
         <div class="gnb">
           <!-- OurCars Click Event -->
-          <a href="#" class="ourCars-open"><span>Our&nbsp;Cars</span></a>
+          <a href="#" id="ourCars-openBtn" class="ourCars-open"><span>Our&nbsp;Cars</span></a>
         </div>
         
         <nav id="quick-link-cars">
@@ -45,7 +45,7 @@
 
           </div>
           <!-- Menu Drop Down Event -->
-          <a href="#" class="toggle"><em><span>OPEN</span></em></a>
+          <a href="#" id="side-toggle-btn" class="toggle"><em><span>OPEN</span></em></a>
         </nav>
 
         <!-- Global Navgation Bar -->
@@ -56,7 +56,7 @@
                 <img src="./img/volvo-wordmark-black.svg" alt="Volvo 로고">
               </a>
               <div class="space-box"></div>
-              <div class="side-toggle-container">
+              <div id="side-toggle-close-btn" class="side-toggle-container">
                 <a href="#" class="side-toggle">
                   <svg viewBox="0 0 24 24" class="close-toggle-btn">
                     <path stroke="currentColor" d="M4.222 4.222l15.556 15.556M4.222 19.778L19.778 4.222"></path>
@@ -392,7 +392,7 @@
           </div> <!-- Mild Hybrid -->
 
           <!-- ourCars-toggle -->
-          <div class="ourCars-toggle-container">
+          <div id="ourCarsToggleBox" class="ourCars-toggle-container">
             <a href="#" id="#ourCars-toggle-btn" class="ourCars-toggle">
               <svg viewBox="0 0 24 24" class="close-toggle-btn">
                 <path stroke="currentColor" d="M4.222 4.222l15.556 15.556M4.222 19.778L19.778 4.222"></path>
@@ -715,41 +715,8 @@
 
 <script>
   'use strict';
-    
-    $('#header a.toggle').on('click', function () {
-      $('#wrapper').addClass('open');
-      $('#wrapper').removeClass('dropDown');
-      $('#ourCars').removeClass('show-drop');
-    });
-    $('#quick-link .side-toggle-container').on('click', function() {
-      $('#wrapper').removeClass('open');
-    });
-    
-    $('#header a.ourCars-open').on('click', function() {
-      $('#wrapper').toggleClass('dropDown');
-      $('#ourCars').toggleClass('show-drop');
-    });
-    
-    $('.ourCars-toggle-container').on('click', function() {
-        $('#wrapper').removeClass('dropDown');
-        $('#ourCars').removeClass('show-drop');
-      })
-    
-      $('#ourCars-window-close').on('click', function() {
-        $('#wrapper').removeClass('dropDown');
-        $('#ourCars').removeClass('show-drop');
-      });
 
-      $('.menu1').on('click', function() {
-        $('.menu1').css({'color' : '#141414'});
-        $('.menu2').css({'color' : '#707070'});
-      });
 
-      $('.menu2').on('click', function() {
-        $('.menu2').css({'color' : '#141414'});
-        $('.menu1').css({'color' : '#707070'});
-      });
-      
 </script>
 
 </html>
