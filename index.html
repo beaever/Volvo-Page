@@ -157,7 +157,7 @@
         <div class="ourcars-menu-container">
         
           <div class="ourcars-menu-items-master">
-            <button class="ourcars-menu-items items menu1" onclick="openMenu('plugin')">
+            <button id="menu1" class="ourcars-menu-items items clicked" onclick="openMenu(event, 'plugin')">
                 <h2>Plug-in&nbsp;hybrids</h2>
                 <span>플러그인&nbsp;하이브리드</span>
             </button> <!-- items1 -->
@@ -166,7 +166,7 @@
               <span>SpaceBox</span>
             </div>
 
-            <button class="ourcars-menu-items items menu2" onclick="openMenu('mild')"> 
+            <button id="menu2" class="ourcars-menu-items items" onclick="openMenu(event, 'mild')"> 
                 <h2>Mild&nbsp;hybrids</h2>
                   <span>마일드&nbsp;하이브리드</span>
             </button> <!-- items2 -->

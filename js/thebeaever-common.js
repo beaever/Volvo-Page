@@ -15,12 +15,12 @@ window.onload = function () {
 
     //  ourCars Menu
     //  ourCars Menu Open
-  ourCarsOpenBtn.onclick = () => {
+  ourCarsOpenBtn.onclick = (e) => {
+    e.preventDefault
     wrapper.classList.toggle('dropDown');
     ourCars.classList.toggle('show-drop');
 
-    let menu1 = document.getElementsByClassName('menu1');
-    let menu2 = document.getElementsByClassName('menu2');
+
     let ourCarsToggleBox = document.getElementById('ourCarsToggleBox');
     let ourCarsWindowClose = document.getElementById('ourCars-window-close');
     
@@ -40,12 +40,33 @@ window.onload = function () {
 
 
 // OurCars in menu click Event list layout
-function openMenu(menuClick) {
-  let i;
-  let x = document.getElementsByClassName('list');
+const ourCarsMenuItems = document.getElementsByClassName('item');
 
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  };
-  document.getElementById(menuClick).style.display = "flex";
+for (let y = 0; y < ourCarsMenuItems.length; y++) {
+  ourCarsMenuItems[y].onclick = () => {
+    if(ourCarsMenuItems[y].id == ('menu1')) {
+      ourCarsMenuItems[y].style.color('#171717')
+    }else {
+      ourCarsMenuItems[y]
+    }
+  }
 };
+
+
+// MenuClick Event / Color Change
+  function openMenu(menuClick,menuContents) {
+    const list = document.getElementsByClassName('list');
+    const items = document.getElementsByClassName('items');
+    var i;
+
+    for (i = 0; i < list.length; i++) {
+      list[i].style.display = "none";
+    }
+
+    for (i = 0; i < items.length; i++) {
+      items[i].className = items[i].className.replace(" clicked", "");
+    }
+
+    document.getElementById(menuContents).style.display = "flex";
+    menuClick.currentTarget.className += " clicked";
+  };
